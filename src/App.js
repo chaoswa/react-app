@@ -1,27 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
 
 class App extends Component {
   render() {
+    let arr = ['aa','bb','cc']
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <Header title="hello页面"/>  
+          <p style={{fontSize:'30px'}} onClick={this.clickHandler.bind(this)}>123</p>
+          <ul>
+            {arr.map((item,index)=>{
+              return (<li key={index}>{item}</li>)
+            })}
+          </ul>
         </header>
       </div>
     );
+  }
+  clickHandler(){
+    console.log(this)
   }
 }
 
