@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { HashRouter, Route } from 'react-router-dom'
-import Hello from '../page/Hello'
+import Home from '../page/Home'
 import Detail from '../page/Detail'
 
 class Routes extends Component {
@@ -8,8 +8,8 @@ class Routes extends Component {
         return (
             <HashRouter>
                 <div>
-                    <Route exact path='/' component={Hello}/>
-                    <Route path='detail' component={Detail}/>
+                    <Route exact path='/' component={Home}/>
+                    <Route path='/detail' component={Detail}/>
                 </div>
             </HashRouter>
         )
