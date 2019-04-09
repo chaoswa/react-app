@@ -42,10 +42,10 @@ service.interceptors.request.use(
 service.interceptors.response.use(
     response => {
         //获取错误状态码
-        const {status}= response.data;
-        if(status==40301){
+        // const {status}= response.data;
+        // if(status===40301){
 
-        }
+        // }
         return response.data;
     },
     error => {

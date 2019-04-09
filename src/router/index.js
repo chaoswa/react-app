@@ -9,7 +9,7 @@ class Routes extends Component {
             <HashRouter>
                 <div>
                     <Route exact path='/' component={Home}/>
-                    <Route path='/detail' component={Detail}/>
+                    <Route path='/detail/:uniquekey' component={Detail}/>
                 </div>
             </HashRouter>
         )
